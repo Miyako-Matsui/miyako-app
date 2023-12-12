@@ -6,6 +6,37 @@ import './SportList.css'
 const SportList = () => {
   const [sports, setSports] = useState([])
 
+  useEffect(() => {
+    // Load sports order from localStorage on component mount
+    const saveSportsOrder = localStorage.setItem(
+      'sports',
+      JSON.stringify(sports)
+    )
+    if (saveSportsOrder) {
+      setSports(JSON.parse(saveSportsOrder))
+    } else {
+      refreshSports()
+    }
+  }, [])
+
+  useEffect(() => {
+    // Save sports order to localStorage whenever sports change
+    localStorage.setItem('sports', JSON.stringify(sports))
+  }, [sports])
+
+  const saveSportsOrder = () => {
+    try {
+      // Save sports order to localStorage whenever sports change
+      localStorage.setItem('sports', JSON.stringify(sports))
+
+      window.alert('Sports order saved successfully!')
+    } catch (error) {
+      console.error('Error saving sports order:', error)
+
+      window.alert('Error saving sports order. Please try again.')
+    }
+  }
+
   const onDragEnd = (result) => {
     if (!result.destination) return
     const newList = Array.from(sports)
@@ -46,7 +77,7 @@ const SportList = () => {
           Refresh Sports List
         </button>
       </div>
-
+      {}
       <div>
         <DragDropContext onDragEnd={onDragEnd}>
           <Droppable droppableId="droppable">
@@ -79,6 +110,12 @@ const SportList = () => {
             )}
           </Droppable>
         </DragDropContext>
+      </div>
+
+      <div className="saveSportsOrder-button-position">
+        <button className="saveSportsOrder-button" onClick={saveSportsOrder}>
+          Save
+        </button>
       </div>
     </>
   )
