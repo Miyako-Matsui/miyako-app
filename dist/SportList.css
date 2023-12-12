@@ -1,0 +1,54 @@
+.refreshSports-button-position {
+  text-align: center;
+  margin: 50px;
+}
+
+.refreshSports-button {
+  background-color: #ea9999;
+  border: none;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  border: 5px solid #a594da;
+}
+
+.refreshSports-button:hover {
+  background-color: #a594da;
+  color: #97de69;
+}
+
+.Sport-card-container {
+  background-color: #f7f1eb;
+  border: 5px solid #fff360;
+  color: #b47a3d;
+  padding: 10px;
+  margin: 20px;
+}
+@media screen and (min-width: 768px) {
+  .Sport-card-container {
+    margin-left: 150px;
+    margin-right: 150px;
+    text-align: center;
+  }
+}
+
+/* .Sport-card-container-name {
+  text-align: center;
+  border-bottom: dashed 2px #e63a3a;
+  margin-left: 60px;
+  margin-right: 60px;
+} */
+/* 
+@media screen and (min-width: 501px) and (max-width: 991px) {
+  .Sport-card-container-name {
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+} */
