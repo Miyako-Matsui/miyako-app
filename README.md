@@ -4,7 +4,7 @@
 2. Run the development server: `npm start`.
 3. Open the project in your web browser at `http://localhost:3000`.
 
-* Note: In case you come across an error message stating 'react-beautiful-dnd - Invariant failed: Cannot find droppable entry with id,' kindly be aware that resolving this issue might involve removing the "React.StrictMode" tag from your index.jsx or index.tsx file.
+Note: In case you come across an error message stating 'react-beautiful-dnd - Invariant failed: Cannot find droppable entry with id,' kindly be aware that resolving this issue might involve removing the "React.StrictMode" tag from your index.jsx or index.tsx file.
 
 ## Project Overview
 
