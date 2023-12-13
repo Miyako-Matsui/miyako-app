@@ -5,7 +5,7 @@ export class ContentRepository {
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve(Sport.createMockedSports())
-      }, 100)
+      }, 5000)
     })
   }
 }

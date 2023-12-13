@@ -1,3 +1,10 @@
+## How to Run the Project
+
+1. Install dependencies: `npm install`.
+2. Run the development server: `npm start`.
+3. Open the project in your web browser at `http://localhost:3000`.
+   Note: In case you come across an error message stating 'react-beautiful-dnd - Invariant failed: Cannot find droppable entry with id,' kindly be aware that resolving this issue might involve removing the "React.StrictMode" tag from your index.jsx or index.tsx file.
+
 ## Project Overview
 
 This project involves the implementation of a 'Sport' class and a 'ContentRepository' class featuring a 'getFeaturedSports()' method to randomly select three sports. The 'SportsList' component is responsible for rendering these sports in a list, showcasing their names and descriptions. Users have the flexibility to rearrange the order of the sports through a drag-and-drop interface. Importantly, the order is persisted even after the page is reloaded, thanks to the utilisation of local storage.
