@@ -16,7 +16,12 @@ const SportList = () => {
   }, [])
 
   const saveSportsOrder = () => {
-    localStorage.setItem('sports', JSON.stringify(sports))
+    try {
+      localStorage.setItem('sports', JSON.stringify(sports))
+      window.alert('Sports order saved successfully!')
+    } catch (error) {
+      window.alert('Error saving sports order. Please try again.')
+    }
   }
 
   const onDragEnd = (result) => {
