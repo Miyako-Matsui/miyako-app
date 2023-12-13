@@ -1,70 +1,25 @@
-# Getting Started with Create React App
+## Project Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project involves the implementation of a 'Sport' class and a 'ContentRepository' class featuring a 'getFeaturedSports()' method to randomly select three sports. The 'SportsList' component is responsible for rendering these sports in a list, showcasing their names and descriptions. Users have the flexibility to rearrange the order of the sports through a drag-and-drop interface. Importantly, the order is persisted even after the page is reloaded, thanks to the utilisation of local storage.
 
-## Available Scripts
+## Technologies Used
 
-In the project directory, you can run:
+- React
+- React Beautiful DND
+- React Hooks (useState, useEffect)
 
-### `npm start`
+## Enjoyable Aspects
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+One of the highlights of this project was the creation of a React Component Library, marking my first attempt at the endeavour. While there were challenges in collecting diverse information and successfully publishing to npm, the sense of accomplishment upon overcoming these obstacles was immensely rewarding.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Challenges Faced
 
-### `npm test`
+A notable challenge was encountered in the process of persisting the list order to local storage. Despite several attempts and failures, the ultimate realization was that an unrelated useEffect in another part of the codebase was the source of the error. This experience underscored the importance of a comprehensive view when writing and debugging code.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Skills Developed and Growth
 
-### `npm run build`
+Through this application, I delved into libraries and techniques that were previously unfamiliar, particularly those related to saving data to local storage. Inspired by the technologies employed, my next goal is to develop a React-based TODO list application with advanced features such as drag-and-drop, list saving, and deletion. While challenges often lead to frustration, this project allowed me to approach issues with a calm mindset, contributing to my personal growth.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Areas for Improvement
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+In terms of styling, attempts were made to incorporate the CSS utility-first framework, CSSTailwind, a tool I have used several times before. Unfortunately, I encountered difficulties during the installation process, preventing its utilisation. For future projects, I aim to address these challenges and enhance my styling capabilities, potentially incorporating tools like CSSTailwind successfully.
