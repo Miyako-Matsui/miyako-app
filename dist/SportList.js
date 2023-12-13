@@ -11,6 +11,22 @@ var _reactBeautifulDnd = require("react-beautiful-dnd");
 require("./SportList.css");
 const SportList = () => {
   const [sports, setSports] = (0, _react.useState)([]);
+  (0, _react.useEffect)(() => {
+    const data = localStorage.getItem('sports');
+    if (data) {
+      setSports(JSON.parse(data));
+    } else {
+      refreshSports();
+    }
+  }, []);
+  const saveSportsOrder = () => {
+    try {
+      localStorage.setItem('sports', JSON.stringify(sports));
+      window.alert('Sports order saved successfully!');
+    } catch (error) {
+      window.alert('Error saving sports order. Please try again.');
+    }
+  };
   const onDragEnd = result => {
     if (!result.destination) return;
     const newList = Array.from(sports);
@@ -34,13 +50,10 @@ const SportList = () => {
       console.error('Error refreshing sports:', error);
     }
   };
-  (0, _react.useEffect)(() => {
-    refreshSports();
-  }, []);
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
-    className: "refreshSports-button-position"
+    className: "button-position"
   }, /*#__PURE__*/_react.default.createElement("button", {
-    className: "refreshSports-button",
+    className: "button",
     onClick: refreshSports
   }, "Refresh Sports List")), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_reactBeautifulDnd.DragDropContext, {
     onDragEnd: onDragEnd
@@ -59,6 +72,11 @@ const SportList = () => {
     className: "Sport-card-container"
   }), /*#__PURE__*/_react.default.createElement("h2", {
     className: "Sport-card-container-name"
-  }, sport.name), /*#__PURE__*/_react.default.createElement("p", null, sport.description)))), provided.placeholder)))));
+  }, sport.name), /*#__PURE__*/_react.default.createElement("p", null, sport.description)))), provided.placeholder)))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "button-position"
+  }, /*#__PURE__*/_react.default.createElement("button", {
+    className: "button",
+    onClick: saveSportsOrder
+  }, "Save")));
 };
 var _default = exports.default = SportList;

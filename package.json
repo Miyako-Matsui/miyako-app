@@ -1,6 +1,6 @@
 {
   "name": "miyako-app",
-  "version": "0.1.3",
+  "version": "1.0.0",
   "main": "dist/index.js",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -15,7 +15,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__,*.md",
+    "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
