@@ -28,11 +28,9 @@ const SportList = () => {
     try {
       // Save sports order to localStorage whenever sports change
       localStorage.setItem('sports', JSON.stringify(sports))
-
       window.alert('Sports order saved successfully!')
     } catch (error) {
       console.error('Error saving sports order:', error)
-
       window.alert('Error saving sports order. Please try again.')
     }
   }
@@ -72,8 +70,8 @@ const SportList = () => {
 
   return (
     <>
-      <div className="refreshSports-button-position">
-        <button className="refreshSports-button" onClick={refreshSports}>
+      <div className="button-position">
+        <button className="button" onClick={refreshSports}>
           Refresh Sports List
         </button>
       </div>
@@ -112,8 +110,8 @@ const SportList = () => {
         </DragDropContext>
       </div>
 
-      <div className="saveSportsOrder-button-position">
-        <button className="saveSportsOrder-button" onClick={saveSportsOrder}>
+      <div className="button-position">
+        <button className="button" onClick={saveSportsOrder}>
           Save
         </button>
       </div>
