@@ -14,7 +14,7 @@ One of the highlights of this project was the creation of a React Component Libr
 
 ## Challenges Faced
 
-A notable challenge was encountered in the process of persisting the list order to local storage. Despite several attempts and failures, the ultimate realization was that an unrelated useEffect in another part of the codebase was the source of the error. This experience underscored the importance of a comprehensive view when writing and debugging code.
+A notable challenge was encountered in the process of persisting the list order to local storage. After several attempts and failures, the ultimate realization was that an 'useEffect' in another part of the codebase, which was initially considered unrelated, was the source of the error. This experience underscored the importance of a comprehensive view when writing and debugging code.
 
 ## Skills Developed and Growth
 
